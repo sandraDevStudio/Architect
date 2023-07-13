@@ -30,8 +30,8 @@ header {
             width: 27px;
             position: absolute;
             top: 0;
-            right: 3rem;
-            margin-top: 3rem;
+            right: 2rem;
+            margin-top: 2rem;
             overflow: visible;
             z-index: 2;
             @media (max-width: 768px){
@@ -46,111 +46,112 @@ header {
               position: absolute;
               transition: 0.3s ease-in-out;
           
-                &:before, &:after {
+              &:before, &:after {
                 background: #fff;
                 display: block;
                 height: 2px;
                 opacity: 1;
                 position: absolute;
                 transition: 0.3s ease-in-out;
-                }
-            
-                &:before, &:after {
+              }
+          
+              &:before, &:after {
                 content: "";
-                }
-        
-                &:before {
+              }
+          
+              &:before {
                 left: 0px;
                 top: -10px;
                 width: 27px;
-                }
-            
-                right: 0px;
-                top: 13px;
-                width: 27px;
-        
-                &:after {
+              }
+          
+              right: 0px;
+              top: 13px;
+              width: 27px;
+          
+              &:after {
                 left: 0px;
                 top: 10px;
                 width: 27px;
-                }
+              }
             }
           
             &.close span {
-                &:before {
-                    top: 0px;
-                    transform: rotate(90deg);
-                    width: 27px;
-                }
-            
-                transform: rotate(-45deg);
-                top: 13px;
+              &:before {
+                top: 0px;
+                transform: rotate(90deg);
                 width: 27px;
+              }
           
-                &:after {
-                    top: 0px;
-                    left: 0;
-                    transform: rotate(90deg);
-                    opacity: 0;
-                    width: 0;
-                }
+              transform: rotate(-45deg);
+              top: 13px;
+              width: 27px;
+          
+              &:after {
+                top: 0px;
+                left: 0;
+                transform: rotate(90deg);
+                opacity: 0;
+                width: 0;
+              }
             }
-        }
+          }
         #myLinks {
-            z-index: 1;
-            min-width: 100%;
-            min-height: 50%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            // height: 0;
-            visibility: hidden;
-            opacity: 0;
-            text-align: center;
-            padding-top: 20px;
-            transition: all 0.3s ease-in-out;
-            text-transform: capitalize;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        // height: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top: 20px;
+        transition: all 0.3s ease-in-out;
+        text-transform: capitalize;
         
             &.overlay {
                 visibility: visible;
                 opacity: 1;
                 padding-top: 100px;
                 background: rgba(0, 0, 0, 0.85);
-            } 
+            }
+            
             ul {
                 padding: 0;
-              }
+            }
             
-              li {
+            li {
                 list-style: none;
-              }
+            }
             
-              a {
+            a {
                 color: #fff;
                 display: block;
                 font-size: 32px;
                 margin-bottom: 30px;
                 text-decoration: none;
-              }   
+                font-family: $bodyFont;
+                &:hover{
+                    color: $light;
+                }
+            }
         }
-        ul {
-            @include flex;
-            @media (max-width: 768px){
-                display: none;
-            }
-            li {
-                padding-left: 20px;
+        .nav-right{
+        @media (max-width: 768px){
+            display: none;
+        }
+        @include flex;
 
-                a {
-                    text-transform: uppercase;
-                }
-
-                i {
-                    padding-left: 7px;
-                    font-size: 25px;
-                }
-            }
+        li{
+            margin-left: 20px;
+        }
+        i{
+            margin-left: 7px;
+            font-size: 20px;
+        }
         }
     }
 

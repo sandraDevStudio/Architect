@@ -152,8 +152,8 @@ header nav #hamburger {
   width: 27px;
   position: absolute;
   top: 0;
-  right: 3rem;
-  margin-top: 3rem;
+  right: 2rem;
+  margin-top: 2rem;
   overflow: visible;
   z-index: 2;
 }
@@ -244,8 +244,12 @@ header nav #myLinks a {
   font-size: 32px;
   margin-bottom: 30px;
   text-decoration: none;
+  font-family: "Lato", sans-serif;
 }
-header nav ul {
+header nav #myLinks a:hover {
+  color: #DEDEDE;
+}
+header nav .nav-right {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -253,19 +257,16 @@ header nav ul {
   align-items: center;
 }
 @media (max-width: 768px) {
-  header nav ul {
+  header nav .nav-right {
     display: none;
   }
 }
-header nav ul li {
-  padding-left: 20px;
+header nav .nav-right li {
+  margin-left: 20px;
 }
-header nav ul li a {
-  text-transform: uppercase;
-}
-header nav ul li i {
-  padding-left: 7px;
-  font-size: 25px;
+header nav .nav-right i {
+  margin-left: 7px;
+  font-size: 20px;
 }
 header .header-center {
   display: flex;
