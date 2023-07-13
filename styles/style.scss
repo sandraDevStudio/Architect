@@ -19,11 +19,126 @@ header {
             img {
                 width: 90px;
             }
+            @media (max-width: 768px){
+                margin-left: 5%;
+            }
         }
-
+        #hamburger {
+            display: none;
+            cursor: pointer;
+            height: 27px;
+            width: 27px;
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            margin-top: 3rem;
+            overflow: visible;
+            z-index: 2;
+            @media (max-width: 768px){
+                display: block;
+            }
+          
+            span {
+              background: #fff;
+              display: block;
+              height: 2px;
+              opacity: 1;
+              position: absolute;
+              transition: 0.3s ease-in-out;
+          
+                &:before, &:after {
+                background: #fff;
+                display: block;
+                height: 2px;
+                opacity: 1;
+                position: absolute;
+                transition: 0.3s ease-in-out;
+                }
+            
+                &:before, &:after {
+                content: "";
+                }
+        
+                &:before {
+                left: 0px;
+                top: -10px;
+                width: 27px;
+                }
+            
+                right: 0px;
+                top: 13px;
+                width: 27px;
+        
+                &:after {
+                left: 0px;
+                top: 10px;
+                width: 27px;
+                }
+            }
+          
+            &.close span {
+                &:before {
+                    top: 0px;
+                    transform: rotate(90deg);
+                    width: 27px;
+                }
+            
+                transform: rotate(-45deg);
+                top: 13px;
+                width: 27px;
+          
+                &:after {
+                    top: 0px;
+                    left: 0;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                    width: 0;
+                }
+            }
+        }
+        #myLinks {
+            z-index: 1;
+            min-width: 100%;
+            min-height: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            // height: 0;
+            visibility: hidden;
+            opacity: 0;
+            text-align: center;
+            padding-top: 20px;
+            transition: all 0.3s ease-in-out;
+            text-transform: capitalize;
+        
+            &.overlay {
+                visibility: visible;
+                opacity: 1;
+                padding-top: 100px;
+                background: rgba(0, 0, 0, 0.85);
+            } 
+            ul {
+                padding: 0;
+              }
+            
+              li {
+                list-style: none;
+              }
+            
+              a {
+                color: #fff;
+                display: block;
+                font-size: 32px;
+                margin-bottom: 30px;
+                text-decoration: none;
+              }   
+        }
         ul {
             @include flex;
-
+            @media (max-width: 768px){
+                display: none;
+            }
             li {
                 padding-left: 20px;
 
@@ -42,6 +157,10 @@ header {
     .header-center {
         @include flex;
         margin-top: 150px;
+        @media (max-width: 768px){
+            margin-top: 70px;
+            text-align: center;
+        }
 
         article {
             flex: 0 0 49%;
@@ -66,6 +185,10 @@ header {
                 flex: 0 0 100%;
                 margin-top: 70px;
             }
+            @media (max-width: 768px){
+                text-align: justify;
+                padding: 20px;
+            }
         }
     }
 
@@ -79,6 +202,10 @@ header {
         @media(max-width: 1251px) {
             right: calc(50% - 22%);
             text-align: center;
+        }
+        @media (max-width: 768px){
+            width: 100%;
+            right: 0;
         }
     }
 }
@@ -99,6 +226,9 @@ header {
             flex: 0 0 100%;
             padding-top: 300px;
             text-align: center;
+        }
+        @media (max-width: 768px){
+            padding: 60px 5% 100px 5%;
         }
 
         h2 {
@@ -135,6 +265,13 @@ header {
             top: 5%;
             right: calc(50% - 18%);
         }
+        @media (max-width: 768px){
+           width: 100%;
+           right: 0;
+           top: 100%;
+           z-index: 2;
+           position: absolute;
+        }
     }
 
     .about-small-div {
@@ -147,6 +284,10 @@ header {
         @media(max-width: 1251px) {
             text-align: center;
             left: calc(50% - 22%);
+        }
+        @media (max-width: 768px){
+            width: 90%;
+            left: 5%;
         }
     }
 }
@@ -173,18 +314,27 @@ header {
             top: 5%;
             left: calc(50% - 18%);
         }
+        @media (max-width: 768px){
+            width: 100%;
+            top: 25%;
+            left: 0;
+        }
 
         .services-img {
             @include flex;
             width: 80%;
             margin: auto;
             margin-top: 50px;
+           
 
             .arch {
                 flex: 0 0 50%;
                 text-align: center;
                 padding: 50px 20px;
                 font-size: 25px;
+                @media(max-width: 768px) {
+                    font-size: 14px;
+                }
             }
 
             .const,
@@ -194,6 +344,9 @@ header {
                 text-align: center;
                 padding: 50px 0;
                 font-size: 25px;
+                @media(max-width: 768px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -221,6 +374,10 @@ header {
             flex: 0 0 100%;
             height: 700px;
         }
+        @media(max-width: 768px) {
+            height: 1000px;
+        }
+        
     }
 
     article {
@@ -231,6 +388,9 @@ header {
         @media(max-width: 1251px) {
             flex: 0 0 100%;
             padding-top: 100px;
+        }
+        @media (max-width: 768px){
+           padding: 70px 5% 70px 5%;
         }
 
         h2 {
@@ -258,6 +418,9 @@ header {
 .numbers {
     background-color: $primary;
     padding: 100px 0 40px 0;
+    @media (max-width: 768px){
+        padding: 50px 5% 0 5%;
+    }
 
     .container {
         @include flex;
@@ -267,6 +430,10 @@ header {
             text-align: center;
             position: relative;
             padding: 0 10px;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+
+            }
 
             .num-vertic {
                 position: absolute;
@@ -275,6 +442,12 @@ header {
                 position: absolute;
                 right: 0;
                 top: calc(50% - 100px);
+                @media (max-width: 768px){
+                    border-left: 0;
+                    border-bottom: 1px solid $white;
+                    width: 90%;
+                    left: 5%;
+                }
             }
         }
 
@@ -283,6 +456,10 @@ header {
             text-align: center;
             position: relative;
             padding: 0 10px;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                padding-top: 20px;
+            }
 
             .num-vertic2 {
                 position: absolute;
@@ -291,6 +468,12 @@ header {
                 position: absolute;
                 right: 0;
                 top: calc(50% - 100px);
+                @media (max-width: 768px){
+                    border-left: 0;
+                    border-bottom: 1px solid $white;
+                    width: 90%;
+                    left: 5%;
+                }
             }
         }
 
@@ -299,6 +482,10 @@ header {
             text-align: center;
             position: relative;
             padding: 0 10px;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                padding-top: 20px;
+            }
         }
     }
 }
@@ -318,10 +505,17 @@ header {
             flex: 0 0 100%;
             padding: 70px 130px 100px 200px;
         }
+        @media (max-width: 768px){
+            padding: 0 5% 10% 5%;
+        }
 
         h2 {
             text-transform: uppercase;
             margin-bottom: 70px;
+            @media (max-width: 768px){
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
         }
         p{
             @media(max-width: 1251px) {
@@ -357,6 +551,12 @@ header {
             top: calc(70%);
             right: calc(50% - 22%);
         }
+        @media (max-width: 768px){
+            
+            width: 100%;
+            right: 0;
+            top: 78%;
+        }
     }
 }
 
@@ -366,6 +566,7 @@ header {
     .container {
         padding: 70px 0 90px 0;
         @include flex;
+        padding: 50% 0 50% 0;
 
         .w1 {
             background: url(../img/young-woman-architect-who-controls-sketches-real-estate-project-cozy-work-place.jpg);
@@ -375,6 +576,10 @@ header {
             height: 310px;
             width: 465px;
             flex: 0 0 30%;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                margin-bottom: 10%;
+            }
 
             .name {
                 box-shadow: 0px 3px 6px $black;
@@ -400,6 +605,10 @@ header {
             height: 310px;
             width: 465px;
             flex: 0 0 30%;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                margin-bottom: 10%;
+            }
 
             .name {
                 box-shadow: 0px 3px 6px $black;
@@ -425,6 +634,10 @@ header {
             height: 310px;
             width: 465px;
             flex: 0 0 30%;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                margin-bottom: 10%;
+            }
 
             .name {
                 box-shadow: 0px 3px 6px $black;
@@ -449,10 +662,17 @@ header {
     background-color: $secondary;
     text-align: center;
     padding-bottom: 75px;
+    @media (max-width: 768px){
+          padding-bottom: 60px;  
+    }
     h2{
         text-transform: capitalize;
         font-size: 47px;
         padding: 75px 0 76px;
+        @media (max-width: 768px){
+            font-size: 30px;
+            padding: 30px 0 20px;
+        }
     }
     .container{
         @include flex;
@@ -460,6 +680,11 @@ header {
             background-color: $primary;
             flex: 0 0 30%;
             padding: 36px 30px 35px 30px;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
             @include flex;
             .img{
                 margin: auto;
@@ -483,8 +708,15 @@ footer{
     .container{
         @include flex;
         padding: 60px 0 27px 0;
+        @media (max-width: 768px){
+            padding: 10% 0 5% 0;
+            text-align: center;
+        }
         .f-left{
             flex: 0 0 30%;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+            }
            
             .logo{
                 width: 80px;
@@ -497,11 +729,18 @@ footer{
                 margin: auto;
                 i{
                     font-size: 20px;
+                    @media (max-width: 768px){
+                        font-size: 30px;
+                    }
                 }
             }
         }
         .f-nav{
             flex: 0 0 20%;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                margin-bottom: 30px;
+            }
             li{
                 margin-bottom: 20px;
                 a{
@@ -513,6 +752,10 @@ footer{
         .f-services{
             flex: 0 0 20%;
             margin-bottom: 50px;
+            @media (max-width: 768px){
+                flex: 0 0 100%;
+                margin-bottom: 1%;
+            }
             li{
                 margin-bottom: 20px;
             .fs{

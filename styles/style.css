@@ -140,12 +140,122 @@ header nav {
 header nav .logo img {
   width: 90px;
 }
+@media (max-width: 768px) {
+  header nav .logo {
+    margin-left: 5%;
+  }
+}
+header nav #hamburger {
+  display: none;
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  margin-top: 3rem;
+  overflow: visible;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  header nav #hamburger {
+    display: block;
+  }
+}
+header nav #hamburger span {
+  background: #fff;
+  display: block;
+  height: 2px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+header nav #hamburger span:before, header nav #hamburger span:after {
+  background: #fff;
+  display: block;
+  height: 2px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+header nav #hamburger span:before, header nav #hamburger span:after {
+  content: "";
+}
+header nav #hamburger span:before {
+  left: 0px;
+  top: -10px;
+  width: 27px;
+}
+header nav #hamburger span:after {
+  left: 0px;
+  top: 10px;
+  width: 27px;
+}
+header nav #hamburger.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+header nav #hamburger.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+header nav #hamburger.close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+header nav #myLinks {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+header nav #myLinks.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.85);
+}
+header nav #myLinks ul {
+  padding: 0;
+}
+header nav #myLinks li {
+  list-style: none;
+}
+header nav #myLinks a {
+  color: #fff;
+  display: block;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
 header nav ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
 }
 header nav ul li {
   padding-left: 20px;
@@ -164,6 +274,12 @@ header .header-center {
   justify-content: space-between;
   align-items: center;
   margin-top: 150px;
+}
+@media (max-width: 768px) {
+  header .header-center {
+    margin-top: 70px;
+    text-align: center;
+  }
 }
 header .header-center article {
   flex: 0 0 49%;
@@ -191,6 +307,12 @@ header .header-center .header-text {
     margin-top: 70px;
   }
 }
+@media (max-width: 768px) {
+  header .header-center .header-text {
+    text-align: justify;
+    padding: 20px;
+  }
+}
 header .header-small-div {
   background-color: #24242C;
   padding: 20px 30px;
@@ -203,6 +325,12 @@ header .header-small-div {
   header .header-small-div {
     right: 28%;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  header .header-small-div {
+    width: 100%;
+    right: 0;
   }
 }
 
@@ -225,6 +353,11 @@ header .header-small-div {
     flex: 0 0 100%;
     padding-top: 300px;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .about article {
+    padding: 60px 5% 100px 5%;
   }
 }
 .about article h2 {
@@ -259,6 +392,15 @@ header .header-small-div {
     right: 32%;
   }
 }
+@media (max-width: 768px) {
+  .about .about-img {
+    width: 100%;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+    position: absolute;
+  }
+}
 .about .about-small-div {
   background-color: #97C7CB;
   padding: 20px 30px;
@@ -271,6 +413,12 @@ header .header-small-div {
   .about .about-small-div {
     text-align: center;
     left: 28%;
+  }
+}
+@media (max-width: 768px) {
+  .about .about-small-div {
+    width: 90%;
+    left: 5%;
   }
 }
 
@@ -302,6 +450,13 @@ header .header-small-div {
     left: 32%;
   }
 }
+@media (max-width: 768px) {
+  .services .services-all {
+    width: 100%;
+    top: 25%;
+    left: 0;
+  }
+}
 .services .services-all .services-img {
   display: flex;
   flex-wrap: wrap;
@@ -318,6 +473,11 @@ header .header-small-div {
   padding: 50px 20px;
   font-size: 25px;
 }
+@media (max-width: 768px) {
+  .services .services-all .services-img .arch {
+    font-size: 14px;
+  }
+}
 .services .services-all .services-img .const,
 .services .services-all .services-img .renov,
 .services .services-all .services-img .ext {
@@ -325,6 +485,13 @@ header .header-small-div {
   text-align: center;
   padding: 50px 0;
   font-size: 25px;
+}
+@media (max-width: 768px) {
+  .services .services-all .services-img .const,
+  .services .services-all .services-img .renov,
+  .services .services-all .services-img .ext {
+    font-size: 14px;
+  }
 }
 .services .services-all .services-vert {
   border-left: 2px solid #24242C;
@@ -350,6 +517,11 @@ header .header-small-div {
     height: 700px;
   }
 }
+@media (max-width: 768px) {
+  .services .services-empty {
+    height: 1000px;
+  }
+}
 .services article {
   background-color: #97C7CB;
   padding: 220px 166px;
@@ -360,6 +532,11 @@ header .header-small-div {
   .services article {
     flex: 0 0 100%;
     padding-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .services article {
+    padding: 70px 5% 70px 5%;
   }
 }
 .services article h2 {
@@ -383,6 +560,11 @@ header .header-small-div {
   background-color: #24242C;
   padding: 100px 0 40px 0;
 }
+@media (max-width: 768px) {
+  .numbers {
+    padding: 50px 5% 0 5%;
+  }
+}
 .numbers .container {
   display: flex;
   flex-wrap: wrap;
@@ -396,6 +578,11 @@ header .header-small-div {
   position: relative;
   padding: 0 10px;
 }
+@media (max-width: 768px) {
+  .numbers .container .number {
+    flex: 0 0 100%;
+  }
+}
 .numbers .container .number .num-vertic {
   position: absolute;
   border-left: 2px solid white;
@@ -404,11 +591,25 @@ header .header-small-div {
   right: 0;
   top: calc(50% - 100px);
 }
+@media (max-width: 768px) {
+  .numbers .container .number .num-vertic {
+    border-left: 0;
+    border-bottom: 1px solid white;
+    width: 90%;
+    left: 5%;
+  }
+}
 .numbers .container .number2 {
   flex: 0 0 33.33%;
   text-align: center;
   position: relative;
   padding: 0 10px;
+}
+@media (max-width: 768px) {
+  .numbers .container .number2 {
+    flex: 0 0 100%;
+    padding-top: 20px;
+  }
 }
 .numbers .container .number2 .num-vertic2 {
   position: absolute;
@@ -418,11 +619,25 @@ header .header-small-div {
   right: 0;
   top: calc(50% - 100px);
 }
+@media (max-width: 768px) {
+  .numbers .container .number2 .num-vertic2 {
+    border-left: 0;
+    border-bottom: 1px solid white;
+    width: 90%;
+    left: 5%;
+  }
+}
 .numbers .container .number3 {
   flex: 0 0 33.33%;
   text-align: center;
   position: relative;
   padding: 0 10px;
+}
+@media (max-width: 768px) {
+  .numbers .container .number3 {
+    flex: 0 0 100%;
+    padding-top: 20px;
+  }
 }
 
 .team {
@@ -446,9 +661,20 @@ header .header-small-div {
     padding: 70px 130px 100px 200px;
   }
 }
+@media (max-width: 768px) {
+  .team article {
+    padding: 0 5% 10% 5%;
+  }
+}
 .team article h2 {
   text-transform: uppercase;
   margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .team article h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1251px) {
   .team article p {
@@ -484,6 +710,13 @@ header .header-small-div {
     right: 28%;
   }
 }
+@media (max-width: 768px) {
+  .team .team-img {
+    width: 100%;
+    right: 0;
+    top: 78%;
+  }
+}
 
 .workers {
   background-color: #DEDEDE;
@@ -495,6 +728,7 @@ header .header-small-div {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 50% 0 50% 0;
 }
 .workers .container .w1 {
   background: url(../img/young-woman-architect-who-controls-sketches-real-estate-project-cozy-work-place.jpg);
@@ -504,6 +738,12 @@ header .header-small-div {
   height: 310px;
   width: 465px;
   flex: 0 0 30%;
+}
+@media (max-width: 768px) {
+  .workers .container .w1 {
+    flex: 0 0 100%;
+    margin-bottom: 10%;
+  }
 }
 .workers .container .w1 .name {
   box-shadow: 0px 3px 6px black;
@@ -527,6 +767,12 @@ header .header-small-div {
   width: 465px;
   flex: 0 0 30%;
 }
+@media (max-width: 768px) {
+  .workers .container .w2 {
+    flex: 0 0 100%;
+    margin-bottom: 10%;
+  }
+}
 .workers .container .w2 .name {
   box-shadow: 0px 3px 6px black;
   padding: 12px 24px;
@@ -549,6 +795,12 @@ header .header-small-div {
   width: 465px;
   flex: 0 0 30%;
 }
+@media (max-width: 768px) {
+  .workers .container .w3 {
+    flex: 0 0 100%;
+    margin-bottom: 10%;
+  }
+}
 .workers .container .w3 .name {
   box-shadow: 0px 3px 6px black;
   padding: 12px 24px;
@@ -568,10 +820,21 @@ header .header-small-div {
   text-align: center;
   padding-bottom: 75px;
 }
+@media (max-width: 768px) {
+  .testimonials {
+    padding-bottom: 60px;
+  }
+}
 .testimonials h2 {
   text-transform: capitalize;
   font-size: 47px;
   padding: 75px 0 76px;
+}
+@media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 30px;
+    padding: 30px 0 20px;
+  }
 }
 .testimonials .container {
   display: flex;
@@ -589,6 +852,13 @@ header .header-small-div {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .testimonials .container article {
+    flex: 0 0 100%;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
 }
 .testimonials .container article .img {
   margin: auto;
@@ -613,8 +883,19 @@ footer .container {
   align-items: center;
   padding: 60px 0 27px 0;
 }
+@media (max-width: 768px) {
+  footer .container {
+    padding: 10% 0 5% 0;
+    text-align: center;
+  }
+}
 footer .container .f-left {
   flex: 0 0 30%;
+}
+@media (max-width: 768px) {
+  footer .container .f-left {
+    flex: 0 0 100%;
+  }
 }
 footer .container .f-left .logo {
   width: 80px;
@@ -633,8 +914,19 @@ footer .container .f-left .f-socials {
 footer .container .f-left .f-socials i {
   font-size: 20px;
 }
+@media (max-width: 768px) {
+  footer .container .f-left .f-socials i {
+    font-size: 30px;
+  }
+}
 footer .container .f-nav {
   flex: 0 0 20%;
+}
+@media (max-width: 768px) {
+  footer .container .f-nav {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
 }
 footer .container .f-nav li {
   margin-bottom: 20px;
@@ -646,6 +938,12 @@ footer .container .f-nav li a {
 footer .container .f-services {
   flex: 0 0 20%;
   margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  footer .container .f-services {
+    flex: 0 0 100%;
+    margin-bottom: 1%;
+  }
 }
 footer .container .f-services li {
   margin-bottom: 20px;
