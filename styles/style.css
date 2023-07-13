@@ -48,12 +48,12 @@ h1, h2, h3, h4 {
 
 h1 {
   font-weight: 700;
-  font-size: 70px;
-  line-height: 87px;
+  font-size: 50px;
+  line-height: 70px;
 }
 
 h2 {
-  font-size: 70px;
+  font-size: 60px;
 }
 
 h3 {
@@ -95,8 +95,8 @@ img {
 .btn {
   background-color: #97C7CB;
   color: white;
-  padding: 14.5px 40px;
-  width: 220px;
+  padding: 13px 30px;
+  width: 200px;
   display: inline-block;
   text-align: center;
 }
@@ -108,8 +108,8 @@ img {
 .btn-white {
   background: white;
   color: #24242C;
-  padding: 14.5px 40px;
-  width: 220px;
+  padding: 13px 30px;
+  width: 200px;
   display: inline-block;
   text-align: center;
 }
@@ -168,13 +168,28 @@ header .header-center {
 header .header-center article {
   flex: 0 0 49%;
 }
+@media (max-width: 1251px) {
+  header .header-center article {
+    flex: 0 0 100%;
+  }
+}
+header .header-center article h1 {
+  margin-bottom: 50px;
+}
 header .header-center article a {
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 header .header-center .header-text {
   flex: 0 0 49%;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   padding: 50px;
+}
+@media (max-width: 1251px) {
+  header .header-center .header-text {
+    flex: 0 0 100%;
+    margin-top: 70px;
+  }
 }
 header .header-small-div {
   background-color: #24242C;
@@ -184,10 +199,16 @@ header .header-small-div {
   right: 0;
   width: 45%;
 }
+@media (max-width: 1251px) {
+  header .header-small-div {
+    right: 28%;
+    text-align: center;
+  }
+}
 
 .about {
   position: relative;
-  background-color: #24242C;
+  background-color: #DEDEDE;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -195,12 +216,25 @@ header .header-small-div {
   align-items: center;
 }
 .about article {
-  padding: 217px 130px 220px 200px;
+  padding: 220px 166px;
   flex: 0 0 55%;
+  background-color: #24242C;
+}
+@media (max-width: 1251px) {
+  .about article {
+    flex: 0 0 100%;
+    padding-top: 300px;
+    text-align: center;
+  }
 }
 .about article h2 {
   text-transform: uppercase;
   margin-bottom: 70px;
+}
+@media (max-width: 1251px) {
+  .about article p {
+    text-align: justify;
+  }
 }
 .about article a {
   margin-top: 60px;
@@ -212,13 +246,18 @@ header .header-small-div {
 .about .about-empty {
   background-color: #DEDEDE;
   flex: 0 0 45%;
-  height: 1000px;
 }
 .about .about-img {
   position: absolute;
   top: 25%;
   right: 200px;
   width: 37%;
+}
+@media (max-width: 1251px) {
+  .about .about-img {
+    top: 5%;
+    right: 32%;
+  }
 }
 .about .about-small-div {
   background-color: #97C7CB;
@@ -227,6 +266,12 @@ header .header-small-div {
   bottom: 0;
   left: 0;
   width: 45%;
+}
+@media (max-width: 1251px) {
+  .about .about-small-div {
+    text-align: center;
+    left: 28%;
+  }
 }
 
 .services {
@@ -251,6 +296,12 @@ header .header-small-div {
   z-index: 2;
   box-shadow: 0px 3px 6px #24242C;
 }
+@media (max-width: 1251px) {
+  .services .services-all {
+    top: 5%;
+    left: 32%;
+  }
+}
 .services .services-all .services-img {
   display: flex;
   flex-wrap: wrap;
@@ -262,10 +313,10 @@ header .header-small-div {
   margin-top: 50px;
 }
 .services .services-all .services-img .arch {
-  width: 690px;
   flex: 0 0 50%;
   text-align: center;
   padding: 50px 20px;
+  font-size: 25px;
 }
 .services .services-all .services-img .const,
 .services .services-all .services-img .renov,
@@ -273,34 +324,50 @@ header .header-small-div {
   flex: 0 0 50%;
   text-align: center;
   padding: 50px 0;
+  font-size: 25px;
 }
 .services .services-all .services-vert {
   border-left: 2px solid #24242C;
-  height: 300px;
+  height: 80%;
   position: absolute;
   left: 50%;
-  top: calc(50% - 150px);
+  top: 10%;
 }
 .services .services-all .services-horiz {
   border-bottom: 2px solid #24242C;
-  width: 500px;
+  width: 80%;
   position: absolute;
   top: 50%;
-  left: calc(50% - 250px);
+  left: 10%;
 }
 .services .services-empty {
   background-color: #DEDEDE;
-  height: 700px;
   flex: 0 0 45%;
+}
+@media (max-width: 1251px) {
+  .services .services-empty {
+    flex: 0 0 100%;
+    height: 700px;
+  }
 }
 .services article {
   background-color: #97C7CB;
-  padding: 230px 166px 220px 167px;
+  padding: 220px 166px;
   flex: 0 0 55%;
+  text-align: center;
+}
+@media (max-width: 1251px) {
+  .services article {
+    flex: 0 0 100%;
+    padding-top: 100px;
+  }
 }
 .services article h2 {
   text-transform: capitalize;
   margin-bottom: 70px;
+}
+.services article p {
+  text-align: justify;
 }
 .services article .btn {
   background-color: #24242C;
@@ -314,7 +381,7 @@ header .header-small-div {
 
 .numbers {
   background-color: #24242C;
-  padding: 120px 110px;
+  padding: 100px 0 40px 0;
 }
 .numbers .container {
   display: flex;
@@ -327,6 +394,7 @@ header .header-small-div {
   flex: 0 0 33.33%;
   text-align: center;
   position: relative;
+  padding: 0 10px;
 }
 .numbers .container .number .num-vertic {
   position: absolute;
@@ -340,6 +408,7 @@ header .header-small-div {
   flex: 0 0 33.33%;
   text-align: center;
   position: relative;
+  padding: 0 10px;
 }
 .numbers .container .number2 .num-vertic2 {
   position: absolute;
@@ -353,11 +422,12 @@ header .header-small-div {
   flex: 0 0 33.33%;
   text-align: center;
   position: relative;
+  padding: 0 10px;
 }
 
 .team {
   position: relative;
-  background-color: #24242C;
+  background-color: #DEDEDE;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -367,10 +437,23 @@ header .header-small-div {
 .team article {
   padding: 217px 130px 220px 200px;
   flex: 0 0 55%;
+  background-color: #24242C;
+}
+@media (max-width: 1251px) {
+  .team article {
+    text-align: center;
+    flex: 0 0 100%;
+    padding: 70px 130px 100px 200px;
+  }
 }
 .team article h2 {
   text-transform: uppercase;
   margin-bottom: 70px;
+}
+@media (max-width: 1251px) {
+  .team article p {
+    text-align: justify;
+  }
 }
 .team article a {
   margin-top: 60px;
@@ -380,15 +463,26 @@ header .header-small-div {
   color: #24242C;
 }
 .team .team-empty {
-  background-color: #DEDEDE;
   flex: 0 0 45%;
   height: 1000px;
+}
+@media (max-width: 1251px) {
+  .team .team-empty {
+    height: 180px;
+  }
 }
 .team .team-img {
   position: absolute;
   top: 25%;
   right: 200px;
   width: 37%;
+}
+@media (max-width: 1251px) {
+  .team .team-img {
+    text-align: justify;
+    top: 70%;
+    right: 28%;
+  }
 }
 
 .workers {
@@ -509,6 +603,7 @@ header .header-small-div {
 
 footer {
   background-color: #24242C;
+  font-size: 16px;
 }
 footer .container {
   display: flex;
@@ -516,10 +611,10 @@ footer .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 72px 0 27px 0;
+  padding: 60px 0 27px 0;
 }
 footer .container .f-left {
-  flex: 0 0 7%;
+  flex: 0 0 30%;
 }
 footer .container .f-left .logo {
   width: 80px;
@@ -532,26 +627,39 @@ footer .container .f-left .f-socials {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 50%;
+  margin: auto;
 }
 footer .container .f-left .f-socials i {
   font-size: 20px;
 }
 footer .container .f-nav {
-  flex: 0 0 30%;
+  flex: 0 0 20%;
 }
-footer .container .f-nav a {
+footer .container .f-nav li {
+  margin-bottom: 20px;
+}
+footer .container .f-nav li a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
 }
 footer .container .f-services {
-  flex: 0 0 30%;
+  flex: 0 0 20%;
+  margin-bottom: 50px;
 }
-footer .container .f-services .fs {
+footer .container .f-services li {
+  margin-bottom: 20px;
+}
+footer .container .f-services li .fs {
   text-transform: uppercase;
 }
-footer .container .f-services a {
+footer .container .f-services li a {
   font-family: "Lato", sans-serif;
 }
 footer .container hr {
   flex: 0 0 100%;
+  margin-bottom: 22px;
+}
+footer .container p {
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

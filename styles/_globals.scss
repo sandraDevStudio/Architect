@@ -17,11 +17,11 @@ h1, h2, h3, h4 {
 }
 h1 {
     font-weight: 700;
-    font-size: 70px;
-    line-height: 87px;
+    font-size: 50px;
+    line-height: 70px;
 }
 h2 {
-    font-size: 70px;
+    font-size: 60px;
 }
 h3 {
     font-size: 30px;
@@ -55,8 +55,8 @@ img {
 .btn {
     background-color: $secondary;
     color: $white;
-    padding: 14.5px 40px;
-    width: 220px;
+    padding: 13px 30px;
+    width: 200px;
     display: inline-block;
     text-align: center;
     &:hover{
@@ -67,8 +67,8 @@ img {
 .btn-white {
     background: $white;
     color: $primary;
-    padding: 14.5px 40px;
-    width: 220px;
+    padding: 13px 30px;
+    width: 200px;
     display: inline-block;
     text-align: center;
     &:hover {
