@@ -1,0 +1,448 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'globals';
+
+// Header
+header {
+    background: url(../img/beautiful-tropical-beach-front-hotel-resort-with-swimming-pool-paradise-destination-vacations-ge.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 30px 0 350px 0;
+
+    nav {
+        @include flex;
+        align-items: flex-start;
+
+        .logo {
+            img {
+                width: 90px;
+            }
+        }
+
+        ul {
+            @include flex;
+
+            li {
+                padding-left: 20px;
+
+                a {
+                    text-transform: uppercase;
+                }
+
+                i {
+                    padding-left: 7px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .header-center {
+        @include flex;
+        margin-top: 150px;
+
+        article {
+            flex: 0 0 49%;
+
+            a {
+                margin-right: 10px;
+            }
+        }
+
+        .header-text {
+            flex: 0 0 49%;
+            background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8));
+            padding: 50px;
+        }
+    }
+
+    .header-small-div {
+        background-color: $primary;
+        padding: 20px 30px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 45%;
+    }
+}
+
+
+// About us
+.about {
+    position: relative;
+    background-color: $primary;
+    @include flex;
+
+    article {
+        padding: 217px 130px 220px 200px;
+        flex: 0 0 55%;
+
+        h2 {
+            text-transform: uppercase;
+            margin-bottom: 70px;
+        }
+
+        a {
+            margin-top: 60px;
+
+            &:hover {
+                background-color: $white;
+                color: $primary;
+            }
+        }
+    }
+
+    .about-empty {
+        background-color: $light;
+        flex: 0 0 45%;
+        height: 1000px;
+    }
+
+    .about-img {
+        position: absolute;
+        top: calc(50% - 25%);
+        right: 200px;
+        width: 37%;
+    }
+
+    .about-small-div {
+        background-color: $secondary;
+        padding: 20px 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 45%;
+    }
+}
+
+// Services
+.services {
+    background-color: $light;
+    position: relative;
+    @include flex;
+
+    .services-all {
+        color: $primary;
+        background: url(../img/graphics.png);
+        background-position: center;
+        background-size: cover;
+        width: 37%;
+        height: 480px;
+        position: absolute;
+        top: 300px;
+        left: 200px;
+        z-index: 2;
+        box-shadow: 0px 3px 6px $primary;
+
+        .services-img {
+            @include flex;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+
+            .arch {
+                width: 690px;
+                flex: 0 0 50%;
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+            .const,
+            .renov,
+            .ext {
+                flex: 0 0 50%;
+                text-align: center;
+                padding: 50px 0;
+            }
+        }
+
+        .services-vert {
+            border-left: 2px solid $primary;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: calc(50% - 150px);
+        }
+
+        .services-horiz {
+            border-bottom: 2px solid $primary;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 250px);
+        }
+    }
+
+    .services-empty {
+        background-color: $light;
+        height: 700px;
+        flex: 0 0 45%;
+    }
+
+    article {
+        background-color: $secondary;
+        padding: 230px 166px 220px 167px;
+        flex: 0 0 55%;
+
+        h2 {
+            text-transform: capitalize;
+            margin-bottom: 70px;
+        }
+
+        .btn {
+            background-color: $primary;
+            color: $white;
+            margin-top: 60px;
+
+            &:hover {
+                background-color: $white;
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Numbers
+.numbers {
+    background-color: $primary;
+    padding: 120px 110px;
+
+    .container {
+        @include flex;
+
+        .number {
+            flex: 0 0 33.33%;
+            text-align: center;
+            position: relative;
+
+            .num-vertic {
+                position: absolute;
+                border-left: 2px solid $white;
+                height: 200px;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 100px);
+            }
+        }
+
+        .number2 {
+            flex: 0 0 33.33%;
+            text-align: center;
+            position: relative;
+
+            .num-vertic2 {
+                position: absolute;
+                border-left: 2px solid $white;
+                height: 200px;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 100px);
+            }
+        }
+
+        .number3 {
+            flex: 0 0 33.33%;
+            text-align: center;
+            position: relative;
+        }
+    }
+}
+
+// Team
+.team {
+    position: relative;
+    background-color: $primary;
+    @include flex;
+
+    article {
+        padding: 217px 130px 220px 200px;
+        flex: 0 0 55%;
+
+        h2 {
+            text-transform: uppercase;
+            margin-bottom: 70px;
+        }
+
+        a {
+            margin-top: 60px;
+
+            &:hover {
+                background-color: $white;
+                color: $primary;
+            }
+        }
+    }
+
+    .team-empty {
+        background-color: $light;
+        flex: 0 0 45%;
+        height: 1000px;
+    }
+
+    .team-img {
+        position: absolute;
+        top: calc(50% - 25%);
+        right: 200px;
+        width: 37%;
+    }
+}
+
+.workers {
+    background-color: $light;
+
+    .container {
+        padding: 70px 0 90px 0;
+        @include flex;
+
+        .w1 {
+            background: url(../img/young-woman-architect-who-controls-sketches-real-estate-project-cozy-work-place.jpg);
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            height: 310px;
+            width: 465px;
+            flex: 0 0 30%;
+
+            .name {
+                box-shadow: 0px 3px 6px $black;
+                padding: 12px 24px;
+                width: 90%;
+                background-color: $primary;
+                position: absolute;
+                bottom: -10%;
+                right: 50%;
+                transform: translate(50%);
+
+                h4 {
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .w2 {
+            background: url(../img/portrait-young-male-architect-office.jpg);
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            height: 310px;
+            width: 465px;
+            flex: 0 0 30%;
+
+            .name {
+                box-shadow: 0px 3px 6px $black;
+                padding: 12px 24px;
+                width: 90%;
+                background-color: $primary;
+                position: absolute;
+                bottom: -10%;
+                right: 50%;
+                transform: translate(50%);
+
+                h4 {
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .w3 {
+            background: url(../img/smiley-architect-looking-camera.jpg);
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            height: 310px;
+            width: 465px;
+            flex: 0 0 30%;
+
+            .name {
+                box-shadow: 0px 3px 6px $black;
+                padding: 12px 24px;
+                width: 90%;
+                background-color: $primary;
+                position: absolute;
+                bottom: -10%;
+                right: 50%;
+                transform: translate(50%);
+
+                h4 {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
+
+// Testimonials
+.testimonials{
+    background-color: $secondary;
+    text-align: center;
+    padding-bottom: 75px;
+    h2{
+        text-transform: capitalize;
+        font-size: 47px;
+        padding: 75px 0 76px;
+    }
+    .container{
+        @include flex;
+        article{
+            background-color: $primary;
+            flex: 0 0 30%;
+            padding: 36px 30px 35px 30px;
+            @include flex;
+            .img{
+                margin: auto;
+                img{
+                    width: 70px;
+                }
+            }
+            p{
+                flex: 0 0 100%;
+                margin: 20px 0;
+            }
+            
+        }
+    }
+}
+
+// Footer
+footer{
+    background-color: $primary;
+    .container{
+        @include flex;
+        padding: 72px 0 27px 0;
+        .f-left{
+            flex: 0 0 7%;
+            .logo{
+                width: 80px;
+                padding-bottom: 40px;
+                margin: auto;
+            }
+            .f-socials{
+                @include flex;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+        .f-nav{
+            flex: 0 0 30%;
+            a{
+                font-family: $bodyFont;
+                text-transform: uppercase;
+            }
+        }
+        .f-services{
+            flex: 0 0 30%;
+            .fs{
+                text-transform: uppercase;
+            }
+            a{
+                font-family: $bodyFont;
+            }
+        }
+        hr{
+            flex: 0 0 100%;
+        }
+    }
+}
