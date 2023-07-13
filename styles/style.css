@@ -292,6 +292,11 @@ header .header-center article {
 header .header-center article h1 {
   margin-bottom: 50px;
 }
+@media (max-width: 768px) {
+  header .header-center article h1 {
+    font-size: 40px;
+  }
+}
 header .header-center article a {
   margin-right: 10px;
   margin-bottom: 10px;
@@ -363,6 +368,11 @@ header .header-small-div {
 .about article h2 {
   text-transform: uppercase;
   margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .about article h2 {
+    font-size: 40px;
+  }
 }
 @media (max-width: 1251px) {
   .about article p {
@@ -542,6 +552,11 @@ header .header-small-div {
 .services article h2 {
   text-transform: capitalize;
   margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .services article h2 {
+    font-size: 40px;
+  }
 }
 .services article p {
   text-align: justify;

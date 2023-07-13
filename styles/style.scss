@@ -170,6 +170,9 @@ header {
 
             h1{
                 margin-bottom: 50px;
+                @media(max-width: 768px) {
+                    font-size: 40px;
+                }
             }
             a {
                 margin-right: 10px;
@@ -234,6 +237,9 @@ header {
         h2 {
             text-transform: uppercase;
             margin-bottom: 70px;
+            @media(max-width: 768px) {
+                font-size: 40px;
+            }
         }
         p{
             @media(max-width: 1251px) {
@@ -396,6 +402,9 @@ header {
         h2 {
             text-transform: capitalize;
             margin-bottom: 70px;
+            @media(max-width: 768px) {
+                font-size: 40px;
+            }
         }
         p{
             text-align: justify;
